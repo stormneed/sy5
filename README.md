@@ -57,6 +57,8 @@ La note finale tiendra compte des éléments suivants :
 
 # TD et TP
 
+* [énoncé de TP nº1](TP/TP1/tp1.pdf) : `ssh` et rappels
+
 
 # Sujets d'examen
 
