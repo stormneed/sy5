@@ -55,6 +55,14 @@ La note finale tiendra compte des éléments suivants :
 * [cours nº1](Cours/cours_1.pdf) : introduction, rôle d'un système
   d'exploitation, notions de processus, de fichier, d'appel système
 
+* cours nº2 : `open` et `close`; 
+  tables des inoeuds, des fichiers ouverts, des descripteurs; 
+  rôle des compteurs; 
+  flags et opérateurs logiques binaires; 
+  pointeur de position courante; 
+  `read`, `write` (première approche, nous y reviendrons); 
+  les [slides](Cours/cours_2.pdf) + [programmes](Cours/code-cours-2) présentés en cours
+
 # TD et TP
 
 * [énoncé de TP nº1](TP/TP1/tp1.pdf) : `ssh` et rappels
