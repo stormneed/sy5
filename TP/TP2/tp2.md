@@ -107,7 +107,7 @@ Comparer ensuite le comportement de `cree-alphabet` avec celui de
 Le répertoire correspondant est [TP/TP2/work/ex-4-garfield](javascript:;).
 Le seul fichier à modifier est `garfield.c`.
 
-Compltéter le fichier `garfield.c` pour obtenir un programme qui lise
+Compléter le fichier `garfield.c` pour obtenir un programme qui lise
 l'entrée standard et la recopie, caractère par caractère, sur la sortie
 standard, *à l'aide des appels système `read()` et `write`*. (`garfield`
 est donc une version très inefficace de la commande `cat`).
