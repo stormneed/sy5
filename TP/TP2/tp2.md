@@ -12,7 +12,7 @@ TP nº2 : entrées-sorties
    [TP/TP2/work/](javascript:;) : c'est dans ce répertoire que vous
    devrez travailler (ne touchez pas au répertoire
    [TP/TP2/template](javascript:;), vous risqueriez ensuite d’avoir des
-   problèmes pour mettre à jour le dépôt).
+   problèmes pour mettre à jour le dépôt).
 4. Déplacez-vous dans le répertoire [TP/TP2/work](javascript:;) pour
    travailler.
 
@@ -38,7 +38,7 @@ erreur standard et la sortie standard en redirigeant celle-ci sur un
 autre terminal.
 
 Comparer le nombre et l'ordre des appels systèmes réalisés avec le nombre
-et l'ordre des appels correspondants aux fonctions de haut-niveau.
+et l'ordre des appels correspondant aux fonctions de haut-niveau.
 Remarquer en particulier que les stratégies d'écriture sur le terminal et
 sur les deux fichiers ordinaires ne sont pas les mêmes.
 
@@ -47,9 +47,9 @@ Expliquer!
 
 ### Instructions complémentaires
 
-Pour chacun des exercices suivants, vous trouverez dans le sous-répertoire 
-`ex-N-blabla` une partie du code, à compléter, ainsi qu'un Makefile qui 
-vous permettra :
+Pour chacun des exercices 1 à 6, vous trouverez dans le sous-répertoire
+`ex-N-blabla` une partie du code, à compléter, ainsi qu'un Makefile qui vous
+permettra :
 
  - de compiler votre code avec `make`,
  - de tester votre code avec `make test`.
@@ -178,4 +178,30 @@ portions marquées avec `TODO [B] :`).
 Vérifiez que cette fois-ci, lorsque vous exécutez `make test`, tous les
 tests sont réussis.
 
+
+
+
+### Exercice hors-série : lecture ligne par ligne et tampon d'entrée
+
+Cet exercice est à faire uniquement si vous avez terminé tous les autres et
+que vous voulez aller plus loin. Il n'y a pas de correction automatique.
+
+L'objectif est d'écrire un programme `my-grep` qui prend un argument, lit
+l'entrée standard, et affiche sur la sortie standard *uniquement les lignes
+qui contiennent l'argument*. Par exemple :
+```
+$ echo "12345\n34567\n56789\n789AB" | ./my-grep 567
+34567
+56789
+```
+
+Vous pouvez dans un premier temps écrire une version « naïve » qui lise
+l'entrée caractère par caractère. Cependant, celle-ci aura le même problème
+que `garfield`. Vous devrez donc à terme lire l'entrée par blocs. Mais comme
+vous ne connaissez pas à l'avance la taille de chaque ligne (rappelons que
+vous devez obligatoirement utiliser l'appel système `read()`, et non pas des
+fonctions de la bibliothèque standard du C telles que `readline()`), il
+arrivera à votre programme de lire le début de la ligne suivante, voire de
+lire plusieurs lignes d'un coup. Pour ne pas perdre toutes les données lues
+« en trop », il faudra donc stocker celles-ci dans un *tampon d'entrée*.
 
