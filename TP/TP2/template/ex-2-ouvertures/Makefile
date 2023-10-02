@@ -13,5 +13,5 @@ distclean:
 	rm -f cree ecrase ajoute cree-ou-ecrase cree-ou-ajoute
 
 test: all
-        $(ENV) bash test.sh
+	$(ENV) bash test.sh
 
