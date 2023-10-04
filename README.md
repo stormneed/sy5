@@ -61,7 +61,13 @@ La note finale tiendra compte des éléments suivants :
   flags et opérateurs logiques binaires; 
   pointeur de position courante; 
   `read`, `write` (première approche, nous y reviendrons); 
-  les [slides](Cours/cours_2.pdf) + [programmes](Cours/code-cours-2) présentés en cours
+  [slides](Cours/cours_2.pdf) + [programmes](Cours/code-cours-2) présentés en cours
+
+* cours nº3 : retour sur `read` et `write`; `lseek`; les entrés/sorties 
+  via la bibliothèque standard; `dup2`;
+  [slides](Cours/cours_3.pdf) +
+  [programmes](Cours/code_cours3) présentés en cours
+
 
 # TD et TP
 
