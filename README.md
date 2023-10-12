@@ -56,7 +56,7 @@ La note finale tiendra compte des éléments suivants :
   d'exploitation, notions de processus, de fichier, d'appel système
 
 * cours nº2 : `open` et `close`; 
-  tables des inoeuds, des fichiers ouverts, des descripteurs; 
+  tables des inoeuds (virtuels), des fichiers ouverts, des descripteurs; 
   rôle des compteurs; 
   flags et opérateurs logiques binaires; 
   pointeur de position courante; 
@@ -68,6 +68,10 @@ La note finale tiendra compte des éléments suivants :
   [slides](Cours/cours_3.pdf) +
   [programmes](Cours/code_cours3) présentés en cours
 
+* cours nº4 : différentes stratégies pour stocker les fichiers; inoeuds
+  (physiques); consultation avec `stat` et dérivés;
+  [slides](Cours/cours_4.pdf) +
+  [programme](Cours/code_cours4) présenté en cours
 
 # TD et TP
 
