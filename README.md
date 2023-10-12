@@ -66,12 +66,12 @@ La note finale tiendra compte des éléments suivants :
 * cours nº3 : retour sur `read` et `write`; `lseek`; les entrés/sorties 
   via la bibliothèque standard; `dup2`;
   [slides](Cours/cours_3.pdf) +
-  [programmes](Cours/code_cours3) présentés en cours
+  [programmes](Cours/code-cours-3) présentés en cours
 
 * cours nº4 : différentes stratégies pour stocker les fichiers; inoeuds
   (physiques); consultation avec `stat` et dérivés;
   [slides](Cours/cours_4.pdf) +
-  [programme](Cours/code_cours4) présenté en cours
+  [programme](Cours/code-cours-4) présenté en cours
 
 # TD et TP
 
