@@ -73,6 +73,10 @@ La note finale tiendra compte des éléments suivants :
   [slides](Cours/cours_4.pdf) +
   [programme](Cours/code-cours-4) présenté en cours
 
+* cours nº5 : organisation du SGF; ouverture et parcours de répertoires;
+  [slides](Cours/cours_5.pdf) +
+  [programme](Cours/code-cours-5) présenté en cours
+
 # TD et TP
 
 * [énoncé de TP nº1](TP/TP1/tp1.pdf) : `ssh` et rappels
