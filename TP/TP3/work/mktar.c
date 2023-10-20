@@ -24,19 +24,39 @@ int tar_one_file(int fd, char * filename) {
    * renseigner au moins les champs indispensables : typeflag, name,
    * mode, size, et _en dernier_ checksum.  
    * Pour typeflag, mode et size, utiliser stat() */
+  memset(phd,0);
+  stat(filename,&st);
+  phd->name=filename;
+  phd->typeflag='0';
+  phd->mode=snprintf(hd.mode, 8, "%07o", &(phd->mode));;
+  phd->size=snprintf(st.st_size, 12, "%011o", &(phd->size))
+  
 
 
   /* calcul de checksum : indispensable pour gnu tar :-( */
   set_checksum(phd);
 
   /* TODO : ouverture du fichier à copier */
-
+  int o=open(filename,O_RDONLY);
+  if(o<0){
+    perror("exit");
+    exit(1);
+  }
 
   /* TODO : copie de l'entête dans l'archive */
-
+  int w=write(phd, fd, BLOCKSIZE);
+  if(w<0){
+    perror("exit");
+    exit(1);
+  }
 
   /* TODO : copie du fichier; ATTENTION à compléter le dernier bloc si
    * nécessaire */
+  int blocks=(phd->size+511)/BLOCKSIZE;
+  for(int i=0; i<blocks;i++){
+    write(o,fd,BLOCKSIZE);
+  }
+  
 
 
   /* TODO : fermeture du fichier copié */

@@ -48,11 +48,11 @@ int main(int argc, char **argv){
     }
 
     /* vérification de la checksum (facultatif) */
-    if (!check_checksum(phd)) {
+    /* if (!check_checksum(phd)) {
       fprintf(stderr, "Checksum erronée : %s\n", phd -> chksum);
       ret = 1;
       break;
-    }
+      }*/
 
     /* TODO : calcul des droits, de la taille et du nombre de blocs occupés --
      * ce nombre est la partie entière supérieure de filesize / BLOCKSIZE, 
