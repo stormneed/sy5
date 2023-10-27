@@ -58,32 +58,32 @@ référence absolue du répertoire courant à l'instar de la commande
 `pwd -P` (consulter `man pwd` si nécessaire), sans utiliser la fonction
 `getcwd()`.
 
-On va procéder par étapes:
+On va procéder par étapes :
 
 * Écrivez la fonction `char *nom_du_repertoire()`  qui retourne le nom du
   répertoire courant dans une arborescence stockée sur un unique
   disque.
 
-* Dans une arborescence complexe, i.e. avec des points de montages, on teste si   deux chemins référencent le même fichier en comparant les numéros d'inœud et ceux de device. Il faut impérativement utiliser le numéro d'inœud fourni par `stat()` plutôt que celui fourni par la structure `dirent`. 
+* Dans une arborescence complexe, i.e. avec des points de montage, tester si deux chemins référencent le même fichier nécessite de comparer à la fois les numéros d'inœud **et ceux de device**, en utilisant impérativement le numéro d'inœud fourni par `stat()` et non celui fourni par la structure `dirent`. 
 
-   Corrigez la fonction précédente pour qu'elle marche même dans une arborescence complexe. Testez  sur lulu dans le répertoire /run, vous pouvez en profiter pour vérifier que dans ce cas là, les numéros d'inœud fourni par stat et par dirent sont différents.
+   Corrigez la fonction précédente pour qu'elle marche même dans une arborescence complexe. Testez  sur lulu dans le répertoire /run; vous pouvez en profiter pour vérifier que dans ce cas-là, les numéros d'inœud fournis par `stat` et par `dirent` sont différents.
 
 * On veut maintenant la référence absolue du répertoire courant.
 Le fichier `mon_pwd.c` vous donne un squelette du programme.
 Pour cela, on appliquera l'algorithme suivant :
 
-	* Initialiser un chemin courant à "." et un chemin pwd à "/"
-	* chercher le nom du répertoire correspondant à courant
-	* concaténer ce nom avec le chemin pwd
+	* initialiser un chemin `courant` à `"."` et un chemin `pwd` à `"/"`
+	* chercher le nom du répertoire correspondant à `courant`
+	* concaténer ce nom avec le chemin `pwd`
 	* recommencer récursivement sur le répertoire parent du répertoire
-      courant, jusqu'à ce que courant corresponde à  la racine '/'  de l'arborescence.
+      `courant`, jusqu'à ce que `courant` corresponde à la racine `/` de l'arborescence.
 
 Une caractérisation de la racine  est qu'elle est son propre parent, c'est-à-dire 
-`.` et `..` ont donc les mêmes numéros d'inœud et de disque.
+que `.` et `..` ont donc les mêmes numéros d'inœud et de disque.
 
 Pour simplifier, toutes les chaînes de caractères seront de taille `PATH_MAX`. Il est possible que cela occasionne quelques warnings à la compilation qu'on ignorera. On pourra bien sûr améliorer le programme dans un deuxième temps.
 
 Testez votre programme et comparer avec le résultat de `pwd -P`. En
-particulier, vérifiez qu'il fonctionne correctement sur `lulu`, dont
+particulier, vérifiez qu'il fonctionne correctement sur lulu, dont
 l'arborescence est constituée de plusieurs disques.
 
